@@ -1,0 +1,379 @@
+/* Reset Styling */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/** Elements **/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    /** Typography **/
+    font-family: inherit;
+    
+
+    /** Background **/
+    background: none;
+    
+    /** Box Model **/
+        /* box-border */
+        border: none;
+    
+    /** Visual Interaction **/
+    cursor: pointer;
+}
+
+
+
+
+/* Header section */
+.header{
+
+    /** Box Model **/
+    /* Set the header to 90% of the body's width and center it using the margin */
+        /* box-size */
+        /* width: 90%; */
+
+        /* box-border */
+        /* border: 1px solid black; */
+
+        /* box-spacing */
+        /* margin: 0 auto; */
+        padding: 1em 0;
+
+    /** Layout **/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.header__title{
+
+    /** Typography **/
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    /* border: 1px solid purple; */
+
+    flex: 1;
+}
+
+.header__menu{
+
+    /** Typography **/
+    list-style: none;
+
+    /** Layout **/
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+
+    /* border: 1px solid green; */
+
+    /** Layout **/
+    justify-content: center;
+    flex: 1;
+
+}
+
+.header__link {
+
+    /** Typography **/
+    color: black;
+    text-decoration: none;
+}
+
+.header__btn-container{
+    /** Layout **/
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    flex: 1;
+
+    /* border: 1px solid red; */
+    
+}
+
+.header__bars{
+    display: none;
+}
+
+/** 
+- Write your media Queries at the end of the component you 
+are trying to modify or at the end of your css file
+
+- Media Queries check the width of the page.
+
+- Common Media Conditions
+    - min-width
+    - max-width
+    - orientation
+    - landscape
+    - (orientation: portrait) and (max-width: 300px)
+    - (orientation: portrait), (max-width: 300px)
+**/
+@media (max-width: 891px) {
+    
+    .header__title{
+        font-size: 1.2rem;
+    }
+
+    .header__link{
+        font-size: 0.8rem;
+    }
+    
+    .header__btn{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:713px) {
+    .header{
+        justify-content: space-between;
+    }
+
+    .header__title{
+        flex: 0 1 auto;
+    }
+
+    .header__menu{
+        display: none;
+    }
+    .header__btn-container{
+        display: none;
+    }
+    .header__bars{
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+
+
+
+/* Hero Section */
+/* This section contains all text so you can simply use text-align to center it 
+    No need to use flex-box
+*/ 
+.hero{
+
+    /** Box Model **/
+
+        /* box-spacing */
+        margin-top: 10rem;
+
+        /* box-border */
+        /* border: 2px solid red; */
+
+    /** Typography **/
+    text-align: center;
+    
+}
+
+.hero__title{
+    /** Typography **/
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: -0.05em;
+
+    /** Box Model **/
+    max-width: 25ch;
+    margin-inline: auto;
+}
+
+.hero__description{
+    /** Box Model **/
+    max-width: 60ch;
+    margin: 2em auto;
+}
+
+
+/** Pricing Section **/
+.pricing{
+    margin-top: 10rem;
+}
+
+.pricing__title{
+    font-size: 2.25rem;
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.pricing__description{
+    font-size: 1.2rem;
+    max-width: 45ch;
+    margin: 1rem 0;
+}
+
+.pricing__container{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.pricing__card{
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    padding: 2rem;
+
+    flex: 1;
+}
+
+.pricing__price{
+    font-size: 2rem;
+}
+
+.pricing__plan{
+    margin: 1rem 0 0.25rem;
+}
+
+.pricing__plan-description{
+    color: #ccc;
+}
+
+.pricing__btn{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 100px;
+    margin: 2rem 0;
+    padding: 0.5rem 1rem
+}
+
+.pricing__features{
+    padding-left: 1rem;
+    color: lightgray;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+/** Features Section **/
+.features{
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.features__title{
+
+    font-size: 2.25rem;
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.features__description{
+    font-size: 1.2rem;
+    max-width: 45ch;
+    margin: 1rem auto;
+}
+
+.features__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.features__box{
+    /** Typography **/
+    text-align: center;
+
+    /** Box Model **/
+    width: 500px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 2rem;
+
+}
+
+.features__box-description{
+    width: 45ch;
+}
+
+
+/** Contact Section **/
+.contact{
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.contact__title{
+    font-size: 2.25rem;
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.contact__description{
+    font-size: 1.2rem;
+    max-width: 60ch;
+    margin: 1rem auto;
+}
+
+
+/** Footer Section **/
+.footer{
+
+    /** Box Model **/
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    
+}
+
+.footer__title{
+    /** Typography **/
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* Utility Classes */
+.btn{
+    
+
+    /** Box Model **/
+        /* box-border */
+        border-radius: 4px;
+        /* box-spacing */
+        padding: 0.5em 1em;
+
+
+    /** Background **/
+    background-color: black;
+    color: white;
+    
+    /** Layout **/
+    display: inline-block;
+
+    /** Typography **/
+    text-decoration: none;
+}
+
+.center-container{
+    width: 90%;
+    margin-inline: auto;
+}
