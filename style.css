@@ -165,7 +165,7 @@ are trying to modify or at the end of your css file
 /* Hero Section */
 /* This section contains all text so you can simply use text-align to center it 
     No need to use flex-box
-*/ 
+*/
 .hero{
 
     /** Box Model **/
@@ -196,7 +196,52 @@ are trying to modify or at the end of your css file
     /** Box Model **/
     max-width: 60ch;
     margin: 2em auto;
+
+    /** Typography **/
+    font-size: 1.2rem;
 }
+
+/** We want our section to stay responsive up until the viewpowrt width of 320px**/
+@media (max-width: 891px) {
+    .hero__title{
+        font-size: 3rem;
+    }
+
+    .hero__description{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 713px) {
+
+    .hero{
+        margin-top: 5rem;
+    }
+    .hero__title{
+        font-size: 2.5rem;
+    }
+    .hero__description{
+        font-size: 0.9rem;
+    }
+    .hero__btn{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 495px) {
+
+    .hero__title{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 396px){
+
+    .hero__title{
+        font-size: 1.6rem;
+    }
+}
+
 
 
 /** Pricing Section **/
@@ -219,10 +264,12 @@ are trying to modify or at the end of your css file
 .pricing__container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
 .pricing__card{
+    min-width: 400px;
     border-radius: 20px;
     background-color: black;
     color: white;
@@ -263,6 +310,61 @@ are trying to modify or at the end of your css file
 }
 
 
+
+@media (max-width: 891px) {
+    .pricing__title {
+        font-size: 2rem;
+    }
+
+    .pricing__description{
+        font-size: 1rem;
+    }
+
+    .pricing__price{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 713px){
+    .pricing{
+        margin-top: 5rem;
+    }
+    
+    .pricing__title{
+        font-size: 1.5rem;
+    }
+
+    .pricing__description{
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+    }
+
+    .pricing__plan-description{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 495px) {
+    .pricing__title{
+        font-size: 1.3rem;
+    }
+    .pricing__card{
+        min-width: 290px;
+    }
+}
+
+@media (max-width: 396px){
+    .pricing__title{
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+
+
+
 /** Features Section **/
 .features{
     text-align: center;
@@ -291,10 +393,9 @@ are trying to modify or at the end of your css file
 }
 
 .features__box{
-    /** Typography **/
+    
     text-align: center;
 
-    /** Box Model **/
     width: 500px;
     border: 1px solid lightgrey;
     border-radius: 10px;
@@ -304,10 +405,61 @@ are trying to modify or at the end of your css file
 
 .features__box-description{
     width: 45ch;
+} 
+
+
+@media (max-width: 891px) {
+    .features__title {
+        font-size: 2rem;
+    }
+
+    .features__description{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 713px){
+    .features{
+        margin-top: 5rem;
+    }
+    
+    .features__title{
+        font-size: 1.5rem;
+    }
+
+    .features__description{
+        font-size: 0.9rem;
+        margin: 0.5rem auto;
+    }
+
+    .features__box-title{
+        font-size: 1rem;
+    }
+
+    .features__box-description{
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 495px) {
+    .features__title{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 396px){
+    .features__title{
+        font-size: 1.1rem;
+    }
 }
 
 
+
+
+
 /** Contact Section **/
+
 .contact{
     text-align: center;
     margin-top: 10rem;
@@ -325,27 +477,61 @@ are trying to modify or at the end of your css file
     margin: 1rem auto;
 }
 
+@media (max-width: 891px){
+    .contact__title{
+        font-size: 2rem;
+    }
+
+    .contact__description{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 713px){
+    .contact{
+        margin-top: 5rem;
+    }
+
+    .contact__title{
+        font-size: 1.5rem;
+    }
+
+    .contact__description{
+        font-size: 0.9rem;
+        margin: 0.5rem auto;
+    }
+
+    .contact__btn{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 495px){
+
+}
+
+@media (max-width: 396px){
+
+}
+
+
 
 /** Footer Section **/
 .footer{
 
-    /** Box Model **/
+    
     margin-top: 10rem;
     margin-bottom: 2rem;
     
 }
 
 .footer__title{
-    /** Typography **/
+    
     font-size: 1rem;
     font-weight: 300;
     letter-spacing: 0.1em;
     text-align: center;
 }
-
-
-
-
 
 
 
